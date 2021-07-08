@@ -14,10 +14,10 @@ data "uptimerobot_alert_contact" "pushover" {
 }
 
 resource "uptimerobot_status_page" "main" {
-  friendly_name  = var.domain_name
-  custom_domain  = "status.${var.domain_name}"
-  monitors       = []
-  password = ""
+  friendly_name = var.domain_name
+  custom_domain = "status.${var.domain_name}"
+  monitors      = []
+  password      = ""
 }
 
 resource "uptimerobot_monitor" "onprem" {

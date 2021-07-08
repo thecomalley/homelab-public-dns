@@ -5,31 +5,31 @@ variable "domain_name" {
 }
 
 variable "cloudflare_email" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
-  sensitive = true
+  sensitive   = true
 }
 
 variable "cloudflare_api_key" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
-  sensitive = true
+  sensitive   = true
 }
 
 variable "uptimerobot_api_key" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
-  sensitive = true
+  sensitive   = true
 }
 
 variable "cloudflare_zone_id" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
-  sensitive = true
+  sensitive   = true
 }
 
 variable "static_ip" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
-  sensitive = true
+  sensitive   = true
 }

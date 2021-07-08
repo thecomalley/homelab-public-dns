@@ -3,17 +3,17 @@ terraform {
   backend "azurerm" {}
   required_providers {
     cloudflare = {
-      source = "cloudflare/cloudflare"
+      source  = "cloudflare/cloudflare"
       version = "2.23.0"
     }
     uptimerobot = {
-      source = "louy/uptimerobot"
+      source  = "louy/uptimerobot"
       version = "0.5.1"
     }
   }
 }
 
-provider "cloudflare" { 
+provider "cloudflare" {
   email   = var.cloudflare_email
   api_key = var.cloudflare_api_key
 }
