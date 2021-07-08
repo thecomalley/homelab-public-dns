@@ -2,6 +2,7 @@
 
 variable "domain_name" {
   description = "fqdn domain name to be used"
+  type        = string
 }
 
 variable "cloudflare_email" {
