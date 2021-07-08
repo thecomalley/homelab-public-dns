@@ -1,19 +1,9 @@
-# Terraform Azure Template
-There's a bunch of common stuff every terraform project needs, this repo is my goto template for new terraform projects
-
-## Features
-| system | Feature    | File                    | Description                                                                              |
-|--------|------------|-------------------------|------------------------------------------------------------------------------------------|
-| github | dependabot | .github/dependabot.yml  | Creates PRs for updates to providers and terraform versions                              |
-| local  | pre-commit | .pre-commit-config.yaml | runs terraform code liniting prior to commits, manually trigger with `pre-commit run -a` |
-
-## Requirements
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus vulputate mauris, a facilisis risus. Quisque sit amet ligula sed massa posuere gravida vitae rhoncus diam
+# Homelab External DNS
+cloudflare & uptimerobot config for external DNS
 
 ## Usage
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus vulputate mauris, a facilisis risus. Quisque sit amet ligula sed massa posuere gravida vitae rhoncus diam
-
-
+- Deployment managed by terraform cloud because quick and simple
+  
 ---
 ## Terraform Docs
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
@@ -21,35 +11,40 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus vulputate ma
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_azuread"></a> [azuread](#requirement\_azuread) | 1.6.0 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | 2.66.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | v1.0.1 |
+| <a name="requirement_cloudflare"></a> [cloudflare](#requirement\_cloudflare) | 2.23.0 |
+| <a name="requirement_uptimerobot"></a> [uptimerobot](#requirement\_uptimerobot) | 0.5.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 2.65.0 |
+| <a name="provider_cloudflare"></a> [cloudflare](#provider\_cloudflare) | 2.23.0 |
+| <a name="provider_uptimerobot"></a> [uptimerobot](#provider\_uptimerobot) | 0.5.1 |
 
 ## Modules
 
-| Name | Source | Version |
-|------|--------|---------|
-| <a name="module_naming"></a> [naming](#module\_naming) | git::github.com/Azure/terraform-azurerm-naming | 64b9489 |
+No modules.
 
 ## Resources
 
 | Name | Type |
 |------|------|
-| [azurerm_resource_group.example](https://registry.terraform.io/providers/hashicorp/azurerm/2.66.0/docs/resources/resource_group) | resource |
+| [cloudflare_record.onprem](https://registry.terraform.io/providers/cloudflare/cloudflare/2.23.0/docs/resources/record) | resource |
+| [uptimerobot_monitor.onprem](https://registry.terraform.io/providers/louy/uptimerobot/0.5.1/docs/resources/monitor) | resource |
+| [uptimerobot_status_page.main](https://registry.terraform.io/providers/louy/uptimerobot/0.5.1/docs/resources/status_page) | resource |
+| [uptimerobot_alert_contact.pushover](https://registry.terraform.io/providers/louy/uptimerobot/0.5.1/docs/data-sources/alert_contact) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_deployment"></a> [deployment](#input\_deployment) | method of deploying the resources | `string` | `"terraform-cli"` | no |
-| <a name="input_environment_name"></a> [environment\_name](#input\_environment\_name) | name of the environment, used in resoruce names and tags | `string` | `"development"` | no |
-| <a name="input_location"></a> [location](#input\_location) | The Azure Region where the resources should exist | `string` | `"Australia East"` | no |
-| <a name="input_project_name"></a> [project\_name](#input\_project\_name) | name of the project, used in resoruce names and tags | `any` | n/a | yes |
+| <a name="input_cloudflare_api_key"></a> [cloudflare\_api\_key](#input\_cloudflare\_api\_key) | (optional) describe your variable | `string` | n/a | yes |
+| <a name="input_cloudflare_email"></a> [cloudflare\_email](#input\_cloudflare\_email) | (optional) describe your variable | `string` | n/a | yes |
+| <a name="input_cloudflare_zone_id"></a> [cloudflare\_zone\_id](#input\_cloudflare\_zone\_id) | (optional) describe your variable | `string` | n/a | yes |
+| <a name="input_domain_name"></a> [domain\_name](#input\_domain\_name) | fqdn domain name to be used | `any` | n/a | yes |
+| <a name="input_static_ip"></a> [static\_ip](#input\_static\_ip) | (optional) describe your variable | `string` | n/a | yes |
+| <a name="input_uptimerobot_api_key"></a> [uptimerobot\_api\_key](#input\_uptimerobot\_api\_key) | (optional) describe your variable | `string` | n/a | yes |
 
 ## Outputs
 
