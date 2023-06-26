@@ -8,7 +8,9 @@ Simple terraform config to create Public DNS records and associated health check
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_cloudflare"></a> [cloudflare](#requirement\_cloudflare) | 4.8.0 |
 
 ## Providers
 
@@ -25,7 +27,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [cloudflare_record.onprem](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/record) | resource |
+| [cloudflare_record.onprem](https://registry.terraform.io/providers/cloudflare/cloudflare/4.8.0/docs/resources/record) | resource |
 | [uptimerobot_monitor.onprem](https://registry.terraform.io/providers/louy/uptimerobot/latest/docs/resources/monitor) | resource |
 | [uptimerobot_status_page.main](https://registry.terraform.io/providers/louy/uptimerobot/latest/docs/resources/status_page) | resource |
 | [uptimerobot_alert_contact.pushover](https://registry.terraform.io/providers/louy/uptimerobot/latest/docs/data-sources/alert_contact) | data source |
