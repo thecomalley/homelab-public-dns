@@ -11,12 +11,6 @@ variable "cloudflare_email" {
   sensitive   = true
 }
 
-variable "cloudflare_api_key" {
-  type        = string
-  description = "(optional) describe your variable"
-  sensitive   = true
-}
-
 variable "uptimerobot_api_key" {
   type        = string
   description = "(optional) describe your variable"

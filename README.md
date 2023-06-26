@@ -16,8 +16,8 @@ Simple terraform config to create Public DNS records and associated health check
 
 | Name | Version |
 |------|---------|
-| <a name="provider_cloudflare"></a> [cloudflare](#provider\_cloudflare) | 2.23.0 |
-| <a name="provider_uptimerobot"></a> [uptimerobot](#provider\_uptimerobot) | 0.5.1 |
+| <a name="provider_cloudflare"></a> [cloudflare](#provider\_cloudflare) | 4.8.0 |
+| <a name="provider_uptimerobot"></a> [uptimerobot](#provider\_uptimerobot) | n/a |
 
 ## Modules
 
@@ -36,7 +36,6 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_cloudflare_api_key"></a> [cloudflare\_api\_key](#input\_cloudflare\_api\_key) | (optional) describe your variable | `string` | n/a | yes |
 | <a name="input_cloudflare_email"></a> [cloudflare\_email](#input\_cloudflare\_email) | (optional) describe your variable | `string` | n/a | yes |
 | <a name="input_cloudflare_zone_id"></a> [cloudflare\_zone\_id](#input\_cloudflare\_zone\_id) | (optional) describe your variable | `string` | n/a | yes |
 | <a name="input_domain_name"></a> [domain\_name](#input\_domain\_name) | fqdn domain name to be used | `string` | n/a | yes |
