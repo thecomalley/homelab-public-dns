@@ -11,13 +11,14 @@ Simple terraform config to create Public DNS records and associated health check
 | Name | Version |
 |------|---------|
 | <a name="requirement_cloudflare"></a> [cloudflare](#requirement\_cloudflare) | 4.8.0 |
+| <a name="requirement_uptimerobot"></a> [uptimerobot](#requirement\_uptimerobot) | 0.5.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_cloudflare"></a> [cloudflare](#provider\_cloudflare) | 4.8.0 |
-| <a name="provider_uptimerobot"></a> [uptimerobot](#provider\_uptimerobot) | n/a |
+| <a name="provider_uptimerobot"></a> [uptimerobot](#provider\_uptimerobot) | 0.5.1 |
 
 ## Modules
 
@@ -28,9 +29,9 @@ No modules.
 | Name | Type |
 |------|------|
 | [cloudflare_record.onprem](https://registry.terraform.io/providers/cloudflare/cloudflare/4.8.0/docs/resources/record) | resource |
-| [uptimerobot_monitor.onprem](https://registry.terraform.io/providers/louy/uptimerobot/latest/docs/resources/monitor) | resource |
-| [uptimerobot_status_page.main](https://registry.terraform.io/providers/louy/uptimerobot/latest/docs/resources/status_page) | resource |
-| [uptimerobot_alert_contact.pushover](https://registry.terraform.io/providers/louy/uptimerobot/latest/docs/data-sources/alert_contact) | data source |
+| [uptimerobot_monitor.onprem](https://registry.terraform.io/providers/louy/uptimerobot/0.5.1/docs/resources/monitor) | resource |
+| [uptimerobot_status_page.main](https://registry.terraform.io/providers/louy/uptimerobot/0.5.1/docs/resources/status_page) | resource |
+| [uptimerobot_alert_contact.pushover](https://registry.terraform.io/providers/louy/uptimerobot/0.5.1/docs/data-sources/alert_contact) | data source |
 
 ## Inputs
 
