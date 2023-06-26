@@ -1,11 +1,15 @@
 locals {
   onprem_apps = toset([
-    "home",
-    "raneto",
-    "sonarr",
+    "homeassistant",
+    "kavita",
+    "jellyfin",
+    "recipes",
+    "qbittorrent",
+    "nextcloud",
+    "plex",
+    "prowlarr",
     "radarr",
-    "deluge",
-    "tautulli"
+    "sonarr",
   ])
 }
 
@@ -35,10 +39,12 @@ resource "uptimerobot_monitor" "onprem" {
 resource "cloudflare_record" "onprem" {
   for_each = local.onprem_apps
 
-  zone_id = var.cloudflare_zone_id
-  name    = each.key
-  value   = var.static_ip
-  type    = "A"
-  ttl     = 1
-  proxied = true
+  zone_id         = var.cloudflare_zone_id
+  name            = each.key
+  value           = var.static_ip
+  type            = "A"
+  ttl             = 1
+  proxied         = true
+  comment         = "Managed by Terraform"
+  allow_overwrite = true
 }
