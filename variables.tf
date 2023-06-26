@@ -5,12 +5,6 @@ variable "domain_name" {
   type        = string
 }
 
-variable "cloudflare_email" {
-  type        = string
-  description = "(optional) describe your variable"
-  sensitive   = true
-}
-
 variable "uptimerobot_api_key" {
   type        = string
   description = "(optional) describe your variable"

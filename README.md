@@ -36,7 +36,6 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_cloudflare_email"></a> [cloudflare\_email](#input\_cloudflare\_email) | (optional) describe your variable | `string` | n/a | yes |
 | <a name="input_cloudflare_zone_id"></a> [cloudflare\_zone\_id](#input\_cloudflare\_zone\_id) | (optional) describe your variable | `string` | n/a | yes |
 | <a name="input_domain_name"></a> [domain\_name](#input\_domain\_name) | fqdn domain name to be used | `string` | n/a | yes |
 | <a name="input_static_ip"></a> [static\_ip](#input\_static\_ip) | (optional) describe your variable | `string` | n/a | yes |
