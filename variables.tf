@@ -5,9 +5,15 @@ variable "domain_name" {
   type        = string
 }
 
+variable "cloudflare_api_token" {
+  type        = string
+  description = "Cloudflare API Token"
+  sensitive   = true
+}
+
 variable "uptimerobot_api_key" {
   type        = string
-  description = "(optional) describe your variable"
+  description = "Uptime Robot API Key"
   sensitive   = true
 }
 
