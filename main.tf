@@ -1,14 +1,8 @@
 locals {
   onprem_apps = toset([
-    "homeassistant",
-    "kavita",
-    "recipes",
-    "qbittorrent",
-    "nextcloud",
-    "plex",
-    "prowlarr",
-    "radarr",
+    "homepage",
     "sonarr",
+    "radarr",
   ])
 }
 
